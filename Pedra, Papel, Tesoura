@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let opcao = ["pedra", "papel", "tesoura"];
+
+        let escolhaCom = Math.floor(Math.random() * 3); // Computador escolhe aleatoriamente
+
+        alert("Pedra, papel ou tesoura!");
+
+        let escolhaJog;
+        let escolhaJogNum;
+
+
+        while (true) {
+            escolhaJog = prompt("Sua escolha: pedra, papel ou tesoura?").toLowerCase();
+
+
+            escolhaJogNum = opcao.indexOf(escolhaJog); 
+
+
+            if (escolhaJogNum !== -1) {
+                break;
+            } else {
+                alert("Escolha inválida! Tente novamente.");
+            }
+        }
+            alert("O computador escolheu: " + opcao[escolhaCom]);
+
+            console.log("Sua escolha: " + opcao[escolhaJogNum]);
+            console.log("Escolha do computador: " + opcao[escolhaCom]);
+
+
+            if (escolhaJogNum === escolhaCom) {
+                alert("Empate!");
+                console.log("Resultado: Empate");
+            } else if (
+                (escolhaJogNum === 0 && escolhaCom === 2) || 
+                (escolhaJogNum === 1 && escolhaCom === 0) || 
+                (escolhaJogNum === 2 && escolhaCom === 1)    
+            ) {
+                alert("Você venceu!");
+                console.log("Resultado: Você venceu!");
+            } else {
+                alert("O computador venceu!");
+                console.log("Resultado: O computador venceu!");
+            }
+    </script>
+</body>
+</html>
