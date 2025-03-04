@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+    </head>
+    <body>
+       <script>
+        let NumeroSecreto = Math.floor(Math.random()*20) + 1;
+        let palpite = 0;
+        console.log(NumeroSecreto);
+        
+        alert("Jogo da Adivinhação");
+        
+        while(palpite !== NumeroSecreto) {
+            palpite = prompt("Adivinhe o Número de 1 a 20:");
+        
+            if(palpite === null) {
+                break;
+            }
+        
+            palpite = Number(palpite);
+        
+            if(isNaN(palpite)){
+                alert("Insira um número válido.");
+                continue;
+            }
+        
+            if(palpite < NumeroSecreto) {
+                alert("Não, O número é maior.");
+            }else if(palpite > NumeroSecreto) {
+                alert("Não, O número é menor.");
+            }else {
+                alert("Parabéns, Você acertou!!!");
+            }
+        }</script>
+    </body>
+</html>
