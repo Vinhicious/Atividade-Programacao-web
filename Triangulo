@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let linhas = 0;
+        alert("Gere um Triângulo com asterisco *");
+        
+        while(true) {
+            linhas = prompt("Quantas linhas o Triângulo terá?");
+            linhas = Number(linhas);
+            
+            if(linhas <= 0 || isNaN(linhas)) {
+                alert("Opção inválida")
+            }else{
+                break;
+            }
+        }
+
+
+        let triangulo = "";
+
+        for (let i = 1; i <= linhas; i++) {
+            for(let j = 0; j < i; j++){
+                triangulo += "*";
+            }
+            triangulo += "\n";
+        }
+        alert(triangulo);
+
+    </script>
+</body>
+</html>
