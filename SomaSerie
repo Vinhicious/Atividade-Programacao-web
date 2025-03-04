@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let termos = 0;
+        let soma = 0;
+        let numeroAtual = "";
+
+        alert("Soma da série 1 + 11 + 111 + ...");
+
+        while (true) {
+            termos = prompt("Quantos termos você deseja na série?");
+            termos = Number(termos);
+
+            if (termos <= 0 || isNaN(termos)) {
+                alert("Por favor, insira um número válido maior que 0.");
+            } else {
+                break;
+            }
+        }
+
+        let resultado = ""; 
+
+        for (let i = 1; i <= termos; i++) {
+            numeroAtual += "1"; 
+            resultado += numeroAtual; 
+        
+            if (i < termos) {
+                resultado += " + ";
+            }
+        
+            soma += Number(numeroAtual); 
+        }
+
+        alert(resultado); 
+        alert("A soma é: " + soma); 
+
+    </script>
+</body>
+</html>
